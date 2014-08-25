@@ -1,0 +1,162 @@
+html {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 0;
+}
+ul {
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  padding-top: 0;
+  padding-left: 100px;
+}
+
+#navbar {
+  width: 100%;
+  height: 75px;
+  background-color: black;
+  margin: 0;
+  position: fixed;
+  display: block;
+}
+
+#card {
+  height: 200px;
+  width: 400px;
+  margin-left: 31%;
+  padding-top: 200px;
+  text-align:  center;
+  font-family: copperplate;
+  color: silver;
+}
+
+h1 {
+  font-size: 45px;
+
+}
+h6 {
+  font-size: 12px;
+
+
+}
+
+li {
+  display: inline-block;
+  height: 25px;
+  margin-left: 12px;
+  padding-top: 26px !important;
+  margin-right: 12px;
+}
+
+li a {
+  text-decoration: none;
+  color: #777;
+
+}
+
+li a:hover {
+    color: white;
+}
+#container {
+   height: 100%;
+    width: 100%;
+    display: block;
+}
+#pic {
+  background: url('http://www.thedesignwork.com/wp-content/uploads/2011/09/Cool-Wood-Texture-Background-05.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.overlay {
+  z-index: 1;
+height: 100%;
+width: 100%;
+position: fixed;
+overflow: auto;
+top: 0px;
+left: 0px;
+/*background: rgba(0, 0, 0, 0.2);*/
+margin-top: 75px;
+}
+
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;
+   background-color: black;
+   z-index: 2;
+}
+
+
+#contactfooter {
+  display: none;
+}
+
+#aboutfooter {
+  display: none;
+}
+
+a.project {
+  height: 100%;
+  width: 75px;
+  padding: 0px;
+  margin: 0;
+  display: inline-block;
+  visibility: hidden;
+
+}
+
+
+
+a.project img {
+  height: 75%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+a.project h5 {
+  height: 25%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.block {
+  height: 10px;
+  width: 150px;
+  border: 3px solid black;
+  background-color: silver;
+  border-radius: 5px;
+  display: none;
+  margin-left: 10px;
+  margin-top: 40px;
+  background-image: -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0.25, #CECBCF),
+  color-stop(0.64, #5B575C)
+);
+background-image: -o-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: -moz-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: -webkit-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: -ms-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
+
+}
