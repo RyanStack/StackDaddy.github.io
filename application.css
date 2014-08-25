@@ -116,24 +116,17 @@ margin-top: 75px;
   height: 10px;
   width: 150px;
   border: 3px solid black;
-  background-color: silver;
+  background-color: black;
   border-radius: 5px;
   display: none;
   margin-left: 10px;
   margin-top: 40px;
-  background-image: -webkit-gradient(
-  linear,
-  left top,
-  left bottom,
-  color-stop(0.25, #CECBCF),
-  color-stop(0.64, #5B575C)
-);
-background-image: -o-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: -moz-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: -webkit-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: -ms-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
+  background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
 
+}
+
+.block:hover {
+  background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%) !important;
 }
 
 .link {
@@ -164,23 +157,16 @@ background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
   height: 10px;
   width: 150px;
   border: 3px solid black;
-  background-color: silver;
+  background-color: black;
   border-radius: 5px;
   display: none;
   margin-left: 10px;
   margin-top: 40px;
-  background-image: -webkit-gradient(
-  linear,
-  left top,
-  left bottom,
-  color-stop(0.25, #CECBCF),
-  color-stop(0.64, #5B575C)
-);
-background-image: -o-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: -moz-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: -webkit-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: -ms-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
-background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
+  background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
+}
+
+.contact:hover {
+  background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%) !important;
 }
 
 .contact img {

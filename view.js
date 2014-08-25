@@ -51,6 +51,7 @@ View.prototype = {
    footer.style.height = '150px'
    $(info).css("height", "120px")
    $(info).css("margin-top", "15px")
+   $(info).css("background-image", "none")
    $(info + " img").css("visibility", "initial")
    $(info + " h5").css("display", "block")
   },
@@ -61,5 +62,6 @@ View.prototype = {
     $(info).css("margin-top", "40px")
     $(info + " img").css("visibility", "hidden")
     $(info + " h5").css("display", "none")
+    $(info).css("background-image", 'linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%)')
   }
 }
