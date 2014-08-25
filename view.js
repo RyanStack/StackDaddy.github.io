@@ -26,23 +26,40 @@ View.prototype = {
     return document.querySelector(this.footer);
   },
   render: function() {
-    // var footer = this.getFooterDiv();
-    console.log("printing data passed to render")
-    // console.log(data)
-    // footer.innerHTML = data
-    // $(".block").show();
+
+
+
     $(".block").toggle("left")
     $(".block").css('display','inline-block');
+    // $(".block").addClass("there");
   },
-  liftFooter: function() {
-   console.log('footer')
+
+  // unrender: function() {
+  //   $('.there').toggle("left")
+  //   $(".there").removeClass("there");
+
+  // },
+
+  renderContacts: function() {
+    $(".contact").toggle("left")
+    $(".contact").css('display','inline-block');
+    // $(".block").addClass("there");
+  },
+
+  liftFooter: function(info) {
    var footer = this.getFooterDiv();
    footer.style.height = '150px'
-   $(".block").css("height", "100px")
+   $(info).css("height", "120px")
+   $(info).css("margin-top", "15px")
+   $(info + " img").css("visibility", "initial")
+   $(info + " h5").css("display", "block")
   },
-  unLiftFooter: function() {
+  unLiftFooter: function(info) {
     var footer = this.getFooterDiv();
     footer.style.height = '60px';
-    $(".block").css("height", "10px")
+    $(info).css("height", "10px")
+    $(info).css("margin-top", "40px")
+    $(info + " img").css("visibility", "hidden")
+    $(info + " h5").css("display", "none")
   }
 }

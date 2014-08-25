@@ -7,6 +7,8 @@ Controller.prototype = {
     var self = this;
     var portfolioButton = this.view.getPortfolioButton();
     portfolioButton.addEventListener("click", this.loadPortfolio.bind(this));
+    var contactButton = this.view.getContactButton();
+    contactButton.addEventListener("click", this.loadContacts.bind(this))
 
     var footerDiv = this.view.getFooterDiv();
     $(footerDiv).on("mouseover", self.stretchFooter.bind(this));
@@ -16,15 +18,46 @@ Controller.prototype = {
   loadPortfolio: function(event) {
     event.preventDefault();
     var portfolio = this.view.preparePortfolio();
-    this.view.render()
+    var fixContacts = document.querySelector('.contact').style.display == "inline-block";
+    if (fixContacts) {
+      this.view.renderContacts();
+    }
+    this.view.render();
   },
 
+  loadContacts: function(event) {
+    event.preventDefault();
+    var fixPort = document.querySelector('.block').style.display == "inline-block";
+    if (fixPort) {
+      this.view.render()
+    }
+    this.view.renderContacts();
+  },
+
+
   stretchFooter: function() {
-    console.log(this)
-    this.view.liftFooter();
+    var info;
+    var portInfo = document.querySelector('.block').style.display == "inline-block";
+    if (portInfo) {
+      info = ".block"
+    }
+    var contactInfo = document.querySelector('.contact').style.display == "inline-block";
+    if (contactInfo) {
+      info = ".contact"
+    }
+    this.view.liftFooter(info);
   },
   unstretchFooter: function() {
-    this.view.unLiftFooter();
+    var info;
+    var portInfo = document.querySelector('.block').style.display == "inline-block";
+    if (portInfo) {
+      info = ".block"
+    }
+    var contactInfo = document.querySelector('.contact').style.display == "inline-block";
+    if (contactInfo) {
+      info = ".contact"
+    }
+    this.view.unLiftFooter(info);
   }
 
 }

@@ -111,31 +111,6 @@ margin-top: 75px;
   display: none;
 }
 
-a.project {
-  height: 100%;
-  width: 75px;
-  padding: 0px;
-  margin: 0;
-  display: inline-block;
-  visibility: hidden;
-
-}
-
-
-
-a.project img {
-  height: 75%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-a.project h5 {
-  height: 25%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
 
 .block {
   height: 10px;
@@ -159,4 +134,58 @@ background-image: -webkit-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
 background-image: -ms-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
 background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
 
+}
+
+.link {
+  text-decoration: none;
+}
+
+.block img {
+  /*display: none;*/
+  height: 70%;
+  width: 90%;
+  display: block;
+  margin-top: 5px;
+  margin-left: 7px;
+  visibility: hidden;
+}
+
+.block h5 {
+  display: none;
+  color: silver;
+  padding: 0;
+  text-align: center;
+  padding-top: 7px;
+  padding-right: 2px;
+  margin: 0;
+}
+
+.contact {
+  height: 10px;
+  width: 150px;
+  border: 3px solid black;
+  background-color: silver;
+  border-radius: 5px;
+  display: none;
+  margin-left: 10px;
+  margin-top: 40px;
+  background-image: -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0.25, #CECBCF),
+  color-stop(0.64, #5B575C)
+);
+background-image: -o-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: -moz-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: -webkit-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: -ms-linear-gradient(bottom, #CECBCF 25%, #5B575C 64%);
+background-image: linear-gradient(to bottom, #CECBCF 25%, #5B575C 64%);
+}
+
+.contact img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
 }
