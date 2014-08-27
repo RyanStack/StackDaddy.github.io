@@ -42,6 +42,9 @@ Controller.prototype =  {
     bulletHole.style.left = (event.pageX) + "px";
     bulletHole.style.top = (event.pageY) + "px";
     document.body.appendChild(bulletHole);
+    setTimeout(function() {
+    $(bulletHole).fadeOut();
+    }, 300);
 
     var spread = bulletHole.getBoundingClientRect();
     var spreadCoords = [spread.left, spread.top,spread.left + 16, spread.top, spread.left +16, spread.top + 16, + spread.left, spread.top +16];
