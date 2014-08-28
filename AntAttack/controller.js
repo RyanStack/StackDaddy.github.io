@@ -1,3 +1,6 @@
+var moveHandle;
+var spawnHandle;
+
 function Controller (view, ant) {
   this.ant = ant
   this.view = view
@@ -15,15 +18,27 @@ Controller.prototype =  {
     zero.style.display = "block"
     playButton.style.display = "none"
     var wall = this.view.getWall();
+    sides = wall.getBoundingClientRect();
+    setInterval(function() {
+      var dangerousAnts = self.view.getAllAnts();
+      for (var i = 0; i<dangerousAnts.length; i++) {
+        var spot = dangerousAnts[i].getBoundingClientRect();
+        if (spot.top <= sides.top || spot.left <= sides.left || spot.bottom >= sides.bottom || spot.right >= sides.right ) {
+          clearInterval(moveHandle);
+          clearInterval(spawnHandle);
+          document.removeEventListener("mousedown", self.killAnt);
+        }
+      }
+    }, 5)
     document.addEventListener("mousedown", this.killAnt.bind(this))
     var ant = this.view.getAnt();
-    setInterval(function() {
+    spawnHandle = setInterval(function() {
       self.view.spawnAnt(ant)
     }, 1000);
 
-    setInterval(function() {
+    moveHandle = setInterval(function() {
       var livingAnts = self.view.getAllAnts();
-      console.log(livingAnts.length)
+      // console.log(livingAnts.length)
       for (var i = 0; i<livingAnts.length; i++) {
         var vector = self.ant.moveAnt();
         var rect = livingAnts[i].getBoundingClientRect();

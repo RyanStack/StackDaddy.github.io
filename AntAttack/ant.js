@@ -39,7 +39,7 @@ Ant.prototype = {
     }
   },
   hitAnt: function(strArr) {
-    console.log(strArr)
+    // console.log(strArr)
     var c = strArr  //.match(/[-\d]+/g);
     var r1x1 = Math.min(c[0],c[2],c[4],c[6]);
     var r1x2 = Math.max(c[0],c[2],c[4],c[6]);
